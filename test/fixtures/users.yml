@@ -1,1 +1,4 @@
-# kosong
+jonru:
+  name: Jonru Pitoy
+  email: pitoy@jon.ru
+  password_digest: <%= User.digest('password') %>
