@@ -6,7 +6,7 @@
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
+      <%= f.label :name, "Nama" %>
       <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>
@@ -15,7 +15,7 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Konfirmasi Password" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Buat akun", class: "btn btn-primary" %>

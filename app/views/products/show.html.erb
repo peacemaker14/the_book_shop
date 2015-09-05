@@ -1,0 +1,21 @@
+<% provide(:title, 'Detail Buku') %>
+<div class="row">
+  <aside class="col-md-2">
+    <%=  image_tag(@product.image_url, class: 'list_image') %>
+  </aside>
+  <div class="col-md-8">
+    <div class="description">
+      <h3><%= @product.title %></h3>
+      <h4>by <%= @product.author %></h4>
+      <p>
+        <%= @product.description %>
+      </p>
+    </div>
+  </div>
+  <aside class="col-md-2">
+    <div class="cost">
+      <h3><%= number_to_currency(@product.price, locale: :id) %></h3>
+      <%= link_to "Tambahkan ke keranjang", '#', class: "btn btn-primary" %>
+    </div>
+  </aside>
+</div>

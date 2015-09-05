@@ -1,0 +1,28 @@
+<% provide(:title, 'Input Buku') %>
+<h1>Buku baru</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@product) do |f| %>
+      <%= render 'shared/error_messages_p' %>
+
+      <%= f.label :title, "Judul" %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :author, "Pengarang" %>
+      <%= f.text_field :author, class: 'form-control' %>
+
+      <%= f.label :description, "Deskripsi" %>
+      <%= f.text_area :description, class: 'form-control' %>
+
+      <%= f.label :image_url %>
+      <%= f.url_field :image_url, class: 'form-control' %>
+
+      <%= f.label :price, "Harga" %>
+      <%= f.number_field :price, class: 'form-control' %>
+
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
+</div>
