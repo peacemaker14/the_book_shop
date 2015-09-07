@@ -1,0 +1,6 @@
+<h2>Keranjang</h2>
+<ul>
+  <% @cart.line_items.each do |item| %>
+    <li><%= item.product.title %> x <%= item.quantity %></li>
+  <% end %>
+</li>

@@ -3,7 +3,7 @@
     <%= link_to "the book shop", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Cart",    '#' %></li>
+        <li><%= link_to "Cart", @cart %></li>
         <% if logged_in? %>
           <li class="dropdown">
             <a href="#" class="dropsown-toggle" data-toggle="dropdown">
