@@ -1,5 +1,5 @@
 jonru:
   name: Jonru Pitoy
-  email: pitoy@jon.ru
+  email: jonru@example.com
   password_digest: <%= User.digest('password') %>
   admin: true

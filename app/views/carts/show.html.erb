@@ -1,6 +1,16 @@
-<h2>Keranjang</h2>
-<ul>
+<h1>Keranjang Belanja</h1>
+<table>
   <% @cart.line_items.each do |item| %>
-    <li><%= item.product.title %> x <%= item.quantity %></li>
+    <tr>
+      <td><%= item.quantity %> &times;</td>
+      <td><%= item.product.title %></td>
+      <td class="item_price"><%= number_to_currency(item.total_price, locale: :id)%></td>
+    </tr>
   <% end %>
-</li>
+    <tr class="total_line">
+      <td colspan="2"> Total </td>
+      <td class="total_cell"><%= number_to_currency(@cart.total_price, locale: :id) %></td>
+    </tr>
+  </table>
+  <%= link_to 'Kosongkan keranjang', @cart, method: :delete, data:{ confirm: 'Apakah anda yakin?'}, class: 'btn btn-primary' %>
+  <%= link_to 'Check Out', new_order_path, class: 'btn btn-primary' %>
